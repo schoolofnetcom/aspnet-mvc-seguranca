@@ -1,0 +1,28 @@
+﻿@model IEnumerable<Microsoft.AspNet.Identity.EntityFramework.IdentityRole>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Lista de Perfis</h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("Nome do Perfil")
+        </th>
+    </tr>
+    @foreach(var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => item.Name)
+            </td>
+        </tr>
+    }
+</table>
+
+
